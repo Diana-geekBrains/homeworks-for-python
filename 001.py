@@ -77,6 +77,49 @@
 #     print(m, end=' ')
 #     m = m * 2
 
+# семинар 3
+
+# Требуется вычислить, сколько раз встречается некоторое число k в списке list_1.
+# Найдите количество и выведите его.
+
+import random
+
+count = int(input('Введите кол-во элементов: '))
+some_list = []
+counter = 0
+for _ in range(count):
+    number = random.randint(0, 10)
+    some_list.append(number)
+print(some_list)
+
+# k = int(input('Введите число К: '))
+# counter = 0
+# for i in some_list:
+#     if i == k:
+#         counter+=1
+# print(counter)
+
+# Требуется найти в массиве list_1 самый близкий по величине элемент
+# к заданному числу k и вывести его.
+
+k = int(input('Введите число К: '))
+n = 0
+for i in range(len(some_list)):
+    if k == some_list[i]:
+        n = some_list[i]
+    elif k + 1 == some_list[i]:
+        n = some_list[i]
+    elif k-1 == some_list[i]:
+        n = some_list[i]
+    elif k+2 == some_list[i]:
+        n = some_list[i]
+    elif k-2 == some_list[i]:
+        n = some_list[i]
+print(n)         
+
+
+
+
 
 
 

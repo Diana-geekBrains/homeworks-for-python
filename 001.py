@@ -82,15 +82,15 @@
 # Требуется вычислить, сколько раз встречается некоторое число k в списке list_1.
 # Найдите количество и выведите его.
 
-import random
+# import random
 
-count = int(input('Введите кол-во элементов: '))
-some_list = []
-counter = 0
-for _ in range(count):
-    number = random.randint(0, 10)
-    some_list.append(number)
-print(some_list)
+# count = int(input('Введите кол-во элементов: '))
+# some_list = []
+# counter = 0
+# for _ in range(count):
+#     number = random.randint(0, 10)
+#     some_list.append(number)
+# print(some_list)
 
 # k = int(input('Введите число К: '))
 # counter = 0
@@ -102,20 +102,79 @@ print(some_list)
 # Требуется найти в массиве list_1 самый близкий по величине элемент
 # к заданному числу k и вывести его.
 
-k = int(input('Введите число К: '))
-n = 0
-for i in range(len(some_list)):
-    if k == some_list[i]:
-        n = some_list[i]
-    elif k + 1 == some_list[i]:
-        n = some_list[i]
-    elif k-1 == some_list[i]:
-        n = some_list[i]
-    elif k+2 == some_list[i]:
-        n = some_list[i]
-    elif k-2 == some_list[i]:
-        n = some_list[i]
-print(n)         
+# k = int(input('Введите число К: '))
+# n = 0
+# for i in range(len(some_list)):
+#     if k == some_list[i]:
+#         n = some_list[i]
+#     elif k + 1 == some_list[i]:
+#         n = some_list[i]
+#     elif k-1 == some_list[i]:
+#         n = some_list[i]
+#     elif k+2 == some_list[i]:
+#         n = some_list[i]
+#     elif k-2 == some_list[i]:
+#         n = some_list[i]
+# print(n)  
+
+# семинар 4
+
+# Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с повторениями).
+# Выдать без повторений в порядке возрастания все те числа, которые встречаются в обоих 
+# наборах. Пользователь вводит 2 числа. n — кол-во элементов первого множества. 
+# m — кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
+
+# n = int(input("Введите кол-во эл-ов 1-го множества "))
+# list_1 = []
+# list_2 = []
+
+# for i in range (n):
+#     list_1.append(int(input()))    
+
+# m = int(input("Введите кол-во эл-ов 2-го множества "))
+# for i in range (m):
+#     list_2.append(int(input()))
+# print (list_1, list_2)
+
+# set_1 = set(list_1)
+# set_2 = set(list_2)
+# set_3 = set_1.intersection(set_2)
+# print(sorted(set_3))
+
+# Задача 24: В фермерском хозяйстве в Карелии выращивают чернику.Она растёт на круглой грядке, 
+# причём кусты высажены только по окружности. Таким образом, у каждого куста есть ровно два 
+# соседних. Всего на грядке растёт N кустов.Эти кусты обладают разной урожайностью, поэтому ко
+# времени сбора на них выросло различное число ягод — на i-ом кусте выросло ai ягод.В этом
+# фермерском хозяйстве внедрена система автоматического сбора черники. Эта система состоит из
+# управляющего модуля и нескольких собирающих модулей. Собирающий модуль за один заход, 
+# находясь непосредственно перед некоторым кустом, собирает ягоды с этого куста и с двух 
+# соседних с ним.
+# Напишите программу для нахождения максимального числа ягод, которое может собрать за один
+# заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
+
+import random
+num = int(input("Введите количество кустов "))
+a = []
+for _ in range (num):
+    b = random.randint(100, 1000)
+    a.append(b)
+print(a)
+max_sum = 0
+sum = 0
+for i in range (num-1):
+    sum = a[i-1] + a[i] + a[i+1]
+    if sum > max_sum:
+        max_sum = sum
+print(max_sum)
+
+
+
+
+
+
+
+
+
 
 
 

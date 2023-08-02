@@ -203,29 +203,30 @@
 # b = int(input('введите шаг ')) 
 # c = int(input('введите общее кол-во эл-тов ')) 
 
-# print(*range(a, a + b * c, b))
+# for i in range(c):
+#     print( a + i *b, end = " " )
+
 
 
 # Задача 32: Определить индексы элементов массива (списка), значения которых принадлежат 
 # заданному диапазону (т.е. не меньше заданного минимума и не больше заданного максимума)
 
-count = int(input('Введите кол-во элементов: '))
-some_list = []
-some_list_2 = []
-counter = 0
-import random
-for _ in range(count):
-    number = random.randint(0, 10)
-    some_list.append(number)
-print(some_list)
+# count = int(input('Введите кол-во элементов: '))
+# some_list = []
+# some_list_2 = []
+# import random
+# for _ in range(count):
+#     number = random.randint(0, 10)
+#     some_list.append(number)
+# print(some_list)
 
-min_value = int(input('Введите минимальное знач-е: '))
-max_value = int(input('Введите максимальное знач-е: '))
+# min_value = int(input('Введите минимальное знач-е: '))
+# max_value = int(input('Введите максимальное знач-е: '))
 
-for ind in range(len(some_list)):
-    if some_list[ind] >= min_value and max_value >= some_list[ind]:
-        some_list_2.append(ind)  
-print(some_list_2)
+# for ind in range(len(some_list)):
+#     if some_list[ind] >= min_value and max_value >= some_list[ind]:
+#         some_list_2.append(ind)  
+# print(some_list_2)
 
 
 
